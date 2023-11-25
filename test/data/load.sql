@@ -13,15 +13,3 @@ INSERT INTO item (name, sellIn, quality) VALUES ('Backstage passes to a TAFKAL80
 INSERT INTO item (name, sellIn, quality) VALUES ('Conjured Mana Cake', 3, 6);
 
 COMMIT;
-
-
-/*
-Novo item "Conjured", diminuí a qualidade 2x mais rapido que os outros
-INSERT INTO item (name, sellIn, quality) VALUES ('Conjured, Hand of Ragnaros', -1, 80);
-
-UPDATE item
-SET
-    quality = quality - 2 
-WHERE 1=1
-    AND name = 'Conjured Mana Cake';
-*/
