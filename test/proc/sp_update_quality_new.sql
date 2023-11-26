@@ -8,7 +8,7 @@ BEGIN
 		SET
 			quality = quality - 1
 		WHERE 1=1
-			AND ( name <> 'Aged Brie'  AND  name <> 'Backstage passes to a TAFKAL80ETC concert' AND name <> 'Sulfuras, Hand of Ragnaros')
+			AND name IN('+5 Dexterity Vest','Elixir of the Mongoose')
 			AND quality > 0
 		;
 
@@ -59,16 +59,16 @@ BEGIN
 			quality = quality + 1
 		WHERE  1=1
 		  AND sellIn < 0
-		  AND NOT (name <> 'Aged Brie')
+		  AND name = 'Aged Brie'
 		  AND quality < 50
-		  AND name <> 'Sulfuras, Hand of Ragnaros'
 		;
 
 		UPDATE item
 		SET
 			quality = quality - 2 
 		WHERE 1=1
-			AND name = 'Conjured Mana Cake'
+	      AND name = 'Conjured Mana Cake'
+		  AND quality > 0
 		;
 
 		COMMIT;
